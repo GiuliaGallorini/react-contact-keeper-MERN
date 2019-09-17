@@ -4,6 +4,11 @@
 // With Node backend technology you cannot use the 'import' syntax for importing modules, so you can use commonJS
 const express = require('express');
 
+const connectDB = require('./config/db');
+
+// Connect Database
+connectDB();
+
 // Initialise Express in a variable called app
 const app = express();
 
