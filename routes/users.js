@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const config = require('config');
+
 const { check, validationResult } = require('express-validator');
 
 const User = require('../models/User');
@@ -48,7 +51,26 @@ router.post(
 
       await user.save();
 
-      res.send('User saved');
+      const payload = {
+        user: {
+          id: user.id
+        }
+      };
+
+      jwt.sign(
+        payload,
+        config.get('jwtSecret'),
+        {
+          // Set the token to expire after 3600 seconds = 1 hour
+          // so after 1 hour it gets destroyed and the user has to login again
+          // (but in production it is better 360000 = 36 hours)
+          expiresIn: 360000
+        },
+        (err, token) => {
+          if (err) throw err;
+          res.json({ token });
+        }
+      );
     } catch (err) {
       console.error(err.message);
       res.status(500).send('Server Error');

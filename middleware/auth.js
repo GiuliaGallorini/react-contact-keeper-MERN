@@ -1,0 +1,25 @@
+// Every time you need to protect a route,
+// you have to bring in it this middleware
+// ex. GET api/auth
+
+const jwt = require('jsonwebtoken');
+const config = require('config');
+
+module.exports = function(req, res, next) {
+  // Get the token from the header
+  const token = req.header('x-auth-token');
+
+  // Check if not token
+  if (!token) {
+    return res.status(401).json({ msg: 'No token, authorization denied' });
+  }
+
+  try {
+    const decoded = jwt.verify(token, config.get('jwtSecret'));
+
+    req.user = decoded.user;
+    next();
+  } catch (err) {
+    res.status(401).json({ msg: 'Token is not valid' });
+  }
+};

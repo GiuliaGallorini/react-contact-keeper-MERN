@@ -12,10 +12,6 @@ $ npm init -y
 
 Install the dependencies you will need:<br>
 
-- EXPRESS for the backend<br>
-- CONFIG a folder with files to connect the app to the database<br>
-- EXPRESS-VALIDATOR to validate the fields of the data inserted<br>
-
 ```
 $ npm i express bcryptjs jsonwebtoken config express-validator mongoose
 ```
@@ -54,6 +50,35 @@ GET - When you fetch, get data<br>
 POST - When you submit something to the server, ex. filling a registration form<br>
 PUT - Update something that is already on the server<br>
 DELETE - When you delete something from the server<br>
+
+## EXPRESS
+
+for the backend<br>
+
+## CONFIG
+
+a folder with files to connect the app to the database MongoDB<br>
+
+## EXPRESS-VALIDATOR
+
+to validate the fields of the data inserted, ex. for a new user the field "name" and "email", so the user can register and be added to your database<br>
+
+## BCRYPTJS
+
+to encrypt the field "password", that will not be saved and stored as plain text, but as a long hash<br>
+
+## JsonWebToken
+
+JsonWebToken is a dependency that creates a special token: this token has a payload in it, and it is sent to access protected routes.<br>
+JWTs are credentials, which can grant access to resources.<br>
+When a user registers, or logs in, a token is generated and sent to him, to authenticate his access.
+The token encoded appears like a long algorithm, composed by 3 parts:
+
+- the HEADER, that contains the algorithm and the type<br>
+- the PAYLOAD, that contains the "sub" number, the "name" and the "iat", issued at, a timestamp. The id of the user is what will be checked by the auth middleware<br>
+- the SIGNATURE<br>
+
+In the authentication route the user registers or logs in, he gets a token, and then he sends that token to access the protected route.
 
 ## Code & Resources
 
