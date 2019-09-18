@@ -12,6 +12,10 @@ $ npm init -y
 
 Install the dependencies you will need:<br>
 
+- EXPRESS for the backend<br>
+- CONFIG a folder with files to connect the app to the database<br>
+- EXPRESS-VALIDATOR to validate the fields of the data inserted<br>
+
 ```
 $ npm i express bcryptjs jsonwebtoken config express-validator mongoose
 ```

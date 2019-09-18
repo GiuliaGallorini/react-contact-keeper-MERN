@@ -6,11 +6,14 @@ const express = require('express');
 
 const connectDB = require('./config/db');
 
+// Initialise Express in a variable called app
+const app = express();
+
 // Connect Database
 connectDB();
 
-// Initialise Express in a variable called app
-const app = express();
+// Init Middleware
+app.use(express.json({ extended: false }));
 
 // You create the route '/' that retrieve a JSON object, a message
 app.get('/', (req, res) =>
