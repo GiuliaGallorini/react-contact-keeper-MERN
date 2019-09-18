@@ -2,7 +2,7 @@
 
 ## My Notes
 
-MERN stack - MongoDB, Express, React, Node.js.
+MERN stack - MongoDB, Express, React, Node.js.<br>
 You will build your own custom API with Node-Express for the back-end and MongoDB for the database.<br><br>
 Create the package.json:<br>
 
@@ -20,13 +20,13 @@ Install the dependencies you will need:<br>
 $ npm i express bcryptjs jsonwebtoken config express-validator mongoose
 ```
 
-Then a couple of dev dependencies:<br>
+Then a couple of DevDependencies:<br>
+
+- CONCURRENTLY allows you to run the backend and the frontend React server at the same time.<br>
 
 ```
 $ npm i -D nodemon concurrently
 ```
-
-Concurrently allows you to run the backend and the frontend React server at the same time.<br>
 
 To run the server:<br>
 
