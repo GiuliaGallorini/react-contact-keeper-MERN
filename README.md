@@ -40,6 +40,12 @@ After having installed React and set concurrently, you can run the server only o
 $ npm run dev
 ```
 
+Install some dependencies for React, into the client folder (\$ cd client):
+
+```
+$ npm i axios react-router-dom uuid react-transition-group
+```
+
 ### MongoDB
 
 It is a free and open-source cross-platform document-oriented **database program**.<br>
