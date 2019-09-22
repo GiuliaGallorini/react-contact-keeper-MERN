@@ -133,6 +133,39 @@ If you add a proxi in _client > package.json_, you have to type less when you ma
 "proxi": "http://localhost:5000"
 ```
 
+## REACT-TRANSITION-GROUP
+
+It helps with CSS transition.<br>
+The added or deleted element fades in and fades out.<br>
+In the file Contacts.js:
+
+```
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+<TransitionGroup>
+  <CSSTransition key={contact.id} timeout={1000} classNames='item'>
+  </CSSTransition>
+</TransitionGroup>
+```
+
+In the file App.css:
+
+```
+.item-enter {
+  opacity: 0;
+}
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+.item-exit {
+  opacity: 1;
+}
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 1000ms ease-in;
+}
+```
+
 ## Code & Resources
 
 Final Code Repo:<br>

@@ -385,6 +385,7 @@ table th {
 }
 
 /* Animation (Add After) */
+/* This is for the react-transition-group */
 .item-enter {
   opacity: 0;
 }
