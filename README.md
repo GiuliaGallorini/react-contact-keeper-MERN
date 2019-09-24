@@ -125,12 +125,12 @@ $ npm run dev
 
 ???<br>
 
-## PROXI
+## PROXY
 
-If you add a proxi in _client > package.json_, you have to type less when you make a request to your backend: instead of _"http://localhost:5000/api/whatever"_ only _"/api/whatever"_:
+If you add a proxy in _client > package.json_, you have to type less when you make a request to your backend: instead of _"http://localhost:5000/api/whatever"_ only _"/api/whatever"_:
 
 ```
-"proxi": "http://localhost:5000"
+"proxy": "http://localhost:5000"
 ```
 
 ## REACT-TRANSITION-GROUP
