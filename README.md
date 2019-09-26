@@ -1,5 +1,11 @@
 # react-contact-keeper-MERN
 
+[UDEMY - React front to back 2019](https://www.udemy.com/modern-react-front-to-back/learn/lecture/14969756#bookmarks)<br>
+by Brad Traversy<br><br>
+2nd Project
+
+[Link to my App deployed](https://intense-meadow-71248.herokuapp.com/login)
+
 ## My Notes
 
 **MERN stack** - MongoDB, Express, React, Node.js.<br>
