@@ -166,6 +166,19 @@ In the file App.css:
 }
 ```
 
+## HEROKU
+
+For the deployment with Heroku, follow the instructions in the video.<br>
+
+Every time you make changes, you need to update the Git repository:
+
+```
+$ git add .
+$ git commit -m "blabla"
+$ git push heroku master
+$ heroku open
+```
+
 ## Code & Resources
 
 Final Code Repo:<br>
